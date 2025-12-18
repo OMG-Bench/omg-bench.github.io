@@ -26,7 +26,7 @@
 
 
   <title>OMG-Bench</title>
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link rel="icon" type="image/x-icon" href="static/images/pinching-hand-noto-512.png">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
 
@@ -88,7 +88,7 @@ Micro Hand Gesture Recognition</h1>
                     <div class="publication-links">
                          <!-- Arxiv PDF link -->
                       <span class="link-block">
-                        <a href="https://arxiv.org/pdf/2503.08257" target="_blank"
+                        <a href="https://omg-bench.github.io" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           <i class="fas fa-file-pdf"></i>
@@ -110,41 +110,41 @@ Micro Hand Gesture Recognition</h1>
 
                   <!-- Github link -->
                   <span class="link-block">
-                    <a href="https://github.com/4DVLab/DexGrasp-Anything" target="_blank"
+                    <a href="https://omg-bench.github.io" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
                     </span>
-                    <span>Code</span>
+                    <span>Code(Coming soon)</span>
                   </a>
                 </span>
 
-                <!-- Dataset Link -->
+                <!-- Dataset Link
                 <span class="link-block">
-                  <a href="https://drive.google.com/file/d/1of-m2qxVqgWf-nHV6oVHPk1z4NWVrEPV/view?usp=drive_link" target="_blank"
+                  <a href="https://omg-bench.github.io" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="fab fa-google-drive"></i>
                   </span>
                   <span>Dataset</span>
                 </a>
-              </span>
+              </span> -->
 
                 <!-- Dataset Link -->
                 <span class="link-block">
-                  <a href="https://huggingface.co/datasets/GaussionZhong/DexGrasp-Anything/blob/main/Dexgraspanyting.tar.gz" target="_blank"
+                  <a href="https://omg-bench.github.io" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <!-- <i class="far fa-huggingface"></i> -->
                       <p style="font-size:18px">🤗</p>
                   </span>
-                  <span>Dataset(HF)</span>
+                  <span>Dataset(Coming soon)</span>
                 </a>
               </span>
                 
                 <!-- ArXiv abstract Link -->
                 <span class="link-block">
-                  <a href=" https://arxiv.org/abs/2503.08257" target="_blank"
+                  <a href="https://omg-bench.github.io" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="ai ai-arxiv"></i>
@@ -160,27 +160,27 @@ Micro Hand Gesture Recognition</h1>
   </div>
 </section>
 
-<!-- Youtube video -->
+<!-- video demo -->
 <section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation and Real World Experiments</h2>
+      <!-- 视频标题 -->
+      <h2 class="title is-3">Dataset and Application Demo</h2>
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
           <div class="publication-video">
-            <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/KNEY_LKG5Y4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <!-- 本地视频嵌入 -->
+            <video controls width="100%" height="auto">
+              <source src="static/videos/video_demo.mp4" type="video/mp4">
+            </video>
           </div>
-          <p>
-            In the first set of real-world experiments, we manually controlled the global position of the robotic hand in ROS RViz to move it up and down, highlighting the stability of the post-grasp motion. In the second set, we employed Inverse Kinematics (IK) to automate the motion planning.
-          </p>          
+        
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- End youtube video -->
+<!-- video demo -->
 
 <!-- Paper abstract -->
 <section class="section hero is-light">
@@ -190,7 +190,7 @@ Micro Hand Gesture Recognition</h1>
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            A dexterous hand capable of grasping any object is essential for the development of general-purpose embodied intelligent robots. However, due to the high degree of freedom in dexterous hands and the vast diversity of objects, generating high-quality, usable grasping poses in a robust manner is a significant challenge. In this paper, we introduce <strong style="color: #FF69B4; font-weight: bold;">DexGrasp Anything</strong>, a method that effectively integrates physical constraints into both the training and sampling phases of a diffusion-based generative model, achieving state-of-the-art performance across nearly all open datasets. Additionally, we present a new dexterous grasping <strong style="color: #FF69B4; font-weight: bold;">dataset containing over 3.4 million diverse grasping poses for more than 15k different objects</strong>, demonstrating its potential to advance universal dexterous grasping.
+            Online micro gesture recognition from hand skeletons is critical for VR/AR interaction but faces challenges due to limited public datasets and task-specific algorithms. Micro gestures involve subtle motion patterns, which make constructing datasets with precise skeletons and frame-level annotations difficult. To this end, we develop a multi-view self-supervised pipeline to automatically generate skeleton data, complemented by heuristic rules and expert refinement for semi-automatic annotation. Based on this pipeline, we introduce <strong style="color: #FF69B4; font-weight: bold;">OMG-Bench</strong>, the first large-scale public benchmark for skeleton-based online micro gesture recognition. It features 40 fine-grained gesture classes with 13,948 instances across 1,272 sequences, characterized by subtle motions, rapid dynamics, and continuous execution. To tackle these challenges, we propose <strong style="color: #FF69B4; font-weight: bold;">Hierarchical Memory-Augmented Transformer (HMATr)</strong>, an end-to-end framework that unifies gesture detection and classification by leveraging hierarchical memory banks which store frame-level details and window-level semantics to preserve historical context. In addition, it employs learnable position-aware queries initialized from the memory to implicitly encode gesture positions and semantics. Experiments show that HMATr outperforms state-of-the-art methods by 7.6\% in detection rate, establishing a strong baseline for online micro gesture recognition. Our code is available in Suppl. Mat. and dataset will be available later.
           </p>
         </div>
       </div>
@@ -199,26 +199,66 @@ Micro Hand Gesture Recognition</h1>
 </section>
 <!-- End paper abstract -->
 
-<!-- Visualization and Performance -->
+<!-- Data collection and annotation pipeline -->
 <section class="section hero is-small">
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column is-full">
         <div class="content">
-          <h2 class="title is-3">Visualization and Performance </h2>
+          <h2 class="title is-3">Data collection and annotation pipeline</h2>
          <p>
-          <img src="static\images\image1.png" alt="Directional Weight Score" class="blend-img-background center-image" style="max-width: 100%; height: auto;" />
+          <img src="static\images\dataset.png" alt="Directional Weight Score" class="blend-img-background center-image" style="max-width: 100%; height: auto;" />
             </p>
             <p>
-              We present DexGrasp Anything, consistently surpassing previous dexterous grasping generation methods across five benchmarks. Visualization of our method's results are shown on the left.
-            </p>
+              Data collection and annotation pipeline of OMG-Bench, using a calibrated five-camera RGB-D system and self-supervised multi-view hand pose estimation to obtain high-quality skeletons, followed by semi-automatic frame-level gesture labeling.            </p>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- End Visualization and Performance -->
+<!-- End Data collection and annotation pipeline -->
  
+<!-- compare datasets -->
+<section class="section hero is-small">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full">
+        <div class="content">
+          <h2 class="title is-3">Comparison of Exisiting Datesets with Ours</h2>
+         <p>
+          <img src="static\images\datasets_compare.png" alt="Directional Weight Score" class="blend-img-background center-image" style="max-width: 100%; height: auto;" />
+            </p>
+            <p>
+              Comparison between open-source skeleton-based gesture recognition datasets and the proposed OMG-Bench.
+              </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- compare datasets -->
+
+<!-- Dataset Properties -->
+<section class="section hero is-small">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full">
+        <div class="content">
+          <h2 class="title is-3">Dataset Properties </h2>
+         <p>
+          <img src="static\images\properties.png" alt="Directional Weight Score" class="blend-img-background center-image" style="max-width: 100%; height: auto;" />
+            </p>
+            <p>
+             (a) Types and locations of defined micro gestures. TIP, PIP, and MCP denote the fingertip, proximal interphalangeal joint, and metacarpophalangeal joint. (b) Statistics of gesture types. (c) Distribution of sample counts per class.            </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Dataset Properties -->
+
+
+
 <!-- Method -->
 <section class="section hero is-small">
   <div class="container is-max-desktop">
@@ -227,10 +267,10 @@ Micro Hand Gesture Recognition</h1>
         <div class="content">
           <h2 class="title is-3">Method </h2>
          <p>
-          <img src="static\images\image2.png" alt="Directional Weight Score" class="blend-img-background center-image" style="max-width: 100%; height: auto;" />
+          <img src="static\images\method.png" alt="Directional Weight Score" class="blend-img-background center-image" style="max-width: 100%; height: auto;" />
             </p>
             <p>
-              <strong style="color: #FF69B4; font-weight: bold;">Overview of DexGrasp Anything.</strong> During training, object information is processed to extract combined semantic and spatial representations as conditioning inputs. At each noise training step, a clean-estimation of the noisy hand pose \( \hat{h}_0 \) is derived from the predicted noise \( \hat{\epsilon}_t \), with physics constraints guiding the noise distribution toward a cleaner, grasp-suitable distribution. During sampling, the Physics-Guided Sampler obtains the current observation \( \hat{h}_0 \) at each denoising step and performs posterior sampling based on this observation. Physical constraints gradually guide the distribution toward a physically feasible grasp configuration \( \hat{h}^*_0 \), enabling effective grasping of diverse objects.
+              Overview of our proposed HMATr. (a) Lightweight backbone processes streaming skeleton inputs using a non-overlapping sliding window approach. (b) Hierarchical memory bank uses historical temporal information to enrich the content of the current window. (c) Position-aware queries implicitly capture potential hand movements, enabling unified detection and recognition. (d) Memory Interaction and Position-aware Interaction encode both position and semantic information of gesture instances from the memory-enhanced features.
             </p>
         </div>
       </div>
@@ -239,105 +279,49 @@ Micro Hand Gesture Recognition</h1>
 </section>
 <!-- Method -->
 
-<!-- Method Performance -->
+<!-- Benchmark Evaluation -->
 <section class="section hero is-small">
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column is-full">
         <div class="content">
-          <h2 class="title is-3">Method Performance </h2>
+          <h2 class="title is-3">OMG-Bench Benchmark Evaluation</h2>
          <p>
-          <img src="static\images\image4.png" alt="Directional Weight Score" class="blend-img-background center-image" style="max-width: 100%; height: auto;" />
+          <img src="static\images\benchmark1.png" alt="Directional Weight Score" class="blend-img-background center-image" style="max-width: 100%; height: auto;" />
             </p>
             <p>
-              Performance comparison across different methods and datasets. Bold numbers indicate the best scores, while underlined numbers indicate the second-best scores. DexGrasp Anything (w/ LLM) achieves the <strong style="color: #FF69B4; font-weight: bold;">highest or near-highest performance </strong>across most metrics.
+              Benchmark of SOTA methods with four metrics. Methods marked with * denote our re-implementations owing to the absence of open-source code.
             </p>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- Method Performance -->
+<!-- Benchmark Evaluation -->
 
-<!-- Dataset -->
+
+<!-- Qualitative Results -->
 <section class="section hero is-small">
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column is-full">
         <div class="content">
-          <h2 class="title is-3">Dataset </h2>
+          <h2 class="title is-3">Qualitative Results</h2>
          <p>
-          <img src="static\images\image3.png" alt="Directional Weight Score" class="blend-img-background center-image" style="max-width: 100%; height: auto;" />
+          <img src="static\images\exper_vis.png" alt="Directional Weight Score" class="blend-img-background center-image" style="max-width: 100%; height: auto;" />
             </p>
             <p>
-              Comparison of dexterous grasp datasets. Our dataset achieves <strong style="color: #FF69B4; font-weight: bold;">the largest scale and covers the most diverse set of objects</strong> to date. This is particularly significant. <strong style="color: #FF69B4; font-weight: bold; font-size: 1.2em;">(our dataset is currently the largest publicly available dataset for the shadow hand)</strong>
+              <strong style="color: #FF69B4; font-weight: bold;">(a) Query Distribution.</strong> We present the distribution of query relative positions within the window for all test samples. We observe that different queries tend to focus on different positions, thereby capturing diverse types of micro-gesture features. This enhances the feature representation capability of HMATr. <strong style="color: #FF69B4; font-weight: bold;">(b) Comparison of Gesture Segment Detection Results.</strong> We visualize the micro gesture detection results of different methods. The results demonstrate that our method can accurately identify the boundaries of consecutive same-class gestures, whereas the other two methods tend to either merge multiple consecutive same-class gestures or over-segment them. This highlights the superiority of our approach.
             </p>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- Dataset -->
+<!-- Qualitative Results -->
 
-<!-- Dataset Performance -->
-<section class="section hero is-small">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column is-full">
-        <div class="content">
-          <h2 class="title is-3">Dataset Performance </h2>
-         <p>
-          <img src="static\images\image5.png" alt="Directional Weight Score" class="blend-img-background center-image" style="max-width: 100%; height: auto;" />
-            </p>
-            <p>
-              <strong style="color: #FF69B4; font-weight: bold;">Evaluating Dataset Quality and Cross-Dataset Generalization</strong>. Model performance is compared on DexGraspNet and RealDex, with training on either DexGraspNet or our dataset. The best result within each group is highlighted in bold.
-            </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- Dataset Performance -->
 
-<!-- Cross-dataset evaluation -->
-<section class="section hero is-small">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column is-full">
-        <div class="content">
-          <h2 class="title is-3">Cross-dataset evaluation </h2>
-         <p>
-          <img src="static\images\image6.png" alt="Directional Weight Score" class="blend-img-background center-image" style="max-width: 100%; height: auto;" />
-            </p>
-            <p>
-              Comparison of diversity (bars) and all-direction grasp success rates (triangles/stars/circles) across models trained on different datasets. Trained on single dataset indicates models were trained on the same dataset they are tested on.
-            </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- Cross-dataset evaluation -->
 
-<!-- Visualization of our method’s results -->
-<section class="section hero is-small">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column is-full">
-        <div class="content">
-          <h2 class="title is-3">Visualization of our method's results </h2>
-         <p>
-          <img src="static\images\image7.png" alt="Directional Weight Score" class="blend-img-background center-image" style="max-width: 100%; height: auto;" />
-         </p>
-         <p>
-          <img src="static\images\image8.png" alt="Directional Weight Score" class="blend-img-background center-image" style="max-width: 100%; height: auto;" />
-         </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- Visualization of our method’s results -->
 
 <!-- Visualization of our method’s results -->
 <!-- <section class="hero is-small is-light">
@@ -428,8 +412,8 @@ Micro Hand Gesture Recognition</h1>
 <!--End paper poster -->
 
 
-<!--BibTex citation -->
-  <section class="section" id="BibTeX">
+<!-- BibTex citation -->
+  <!-- <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
       <pre><code>@article{zhong2025dexgrasp,
@@ -439,7 +423,7 @@ Micro Hand Gesture Recognition</h1>
         year={2025}
       }</code></pre>
     </div>
-</section>
+</section> -->
 <!--End BibTex citation -->
 
 
